@@ -62,7 +62,7 @@ body{
 }
 
 .Categorias {
-    font-size: 75px;
+    font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
     color: white;
     text-align: center;
@@ -77,4 +77,8 @@ body{
 .VideoTopgun {
     height: 400px;
     width: 900px;
+}
+
+.Texto {
+    color: white;
 }
