@@ -14,6 +14,7 @@ body{
 .Navegador {
     color: white;
     text-align: right;
+    text-decoration: none;
 }
 
 .NombreMarca {
@@ -64,8 +65,9 @@ body{
 .Categorias {
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
-    color: white;
+    color: blueviolet;
     text-align: center;
+    text-decoration: none;
 }
 
 .DescripcionFoto {
@@ -81,4 +83,10 @@ body{
 
 .Texto {
     color: white;
+}
+
+.Minisubtit {
+    color: white;
+    font-weight: bold;
+    font-size: large;
 }
