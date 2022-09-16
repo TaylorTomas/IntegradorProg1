@@ -90,3 +90,24 @@ body{
     font-weight: bold;
     font-size: large;
 }
+
+.Playboton {
+    height: 50px;
+    width: 50px;
+}
+
+.MirarAhora {
+    color: blueviolet;
+    font-weight: bolder;
+    font-size: large;
+    
+}
+
+.VisitarWeb {
+    height: 50px;
+    width: 175px;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
