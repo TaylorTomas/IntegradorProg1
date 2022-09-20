@@ -110,7 +110,7 @@ body{
     color: blueviolet;
     font-weight: bolder;
     font-size: large;
-    
+    text-decoration: none;
 }
 
 .VisitarWeb {
@@ -123,10 +123,33 @@ body{
 }
 
 footer {
-margin: 0%;
-background-color: rgb(126, 10, 241);
-font-size: 25px;
-padding: 1em 0;
-text-align: center;
-margin-top: auto;
+    margin: 0%;
+    background-color: rgb(126, 10, 241);
+    font-size: 25px;
+    padding: 1em 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.Searchbox {
+    float: left;
+    background-color: white;
+    padding: 6px;  
+    margin-top: 8px;  
+    font-size: 17px;  
+    border: none; 
+}
+
+.Searchbutton {
+    padding: 6px;
+    margin-top: 8px;
+    margin-left: 10px;
+    background: blueviolet;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.Searchbutton:hover {
+    background-color: rgb(120, 7, 225);
 }
