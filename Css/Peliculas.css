@@ -153,3 +153,21 @@ footer {
 .Searchbutton:hover {
     background-color: rgb(120, 7, 225);
 }
+
+
+.todo {
+    align-self: baseline;
+    align-self: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+
+}
+
+.pelitop{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

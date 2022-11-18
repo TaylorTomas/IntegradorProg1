@@ -15,16 +15,18 @@ fetch(urlpeliculastop)
     .then(function(res){
         return res.json()
     })
-    .then(function(){
+    .then(function(data){
         console.log(data);
         let contenedor = document.querySelector(".pelitop")
         for (let i=0; i<4; i++){
             console.log(data.results[i]);
             let image = data.results[i].poster_path
-            let titile = data.results[i].titile
+            let title = data.results[i].title
             let id = data.results[i].id
-            contenedor.innerHTML += `<a href="./Descripcion-pelicula.html">
-            <img class = "Img" src="Fotos/Shawshank-Redemption.jpg/${image}"></a><h3 class = "texto">${title}</h3>` 
+            contenedor.innerHTML += `<div class = "todo">
+            <a href="./Descripcion-pelicula.html">
+            <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><h3 class = "titulopeli">${title}</h3>
+            </div>`
         }
             section1.innerHTML = movie;
             return data
