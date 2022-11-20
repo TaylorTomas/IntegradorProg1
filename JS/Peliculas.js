@@ -35,3 +35,79 @@ fetch(urlpeliculastop)
     .catch(function(error){
         console.log(error)
     })
+
+
+fetch(urlpeliculaspop)
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(data){
+        console.log(data);
+        let contenedor = document.querySelector(".pelipop")
+        for (let i=0; i<4; i++){
+            console.log(data.results[i]);
+            let image = data.results[i].poster_path
+            let title = data.results[i].title
+            let id = data.results[i].id
+            contenedor.innerHTML += `<div class = "todo">
+            <a href="./Descripcion-pelicula.html">
+            <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><h3 class = "titulopeli">${title}</h3>
+            </div>`
+        }
+            section1.innerHTML = movie;
+            return data
+    })
+
+    .catch(function(error){
+        console.log(error)
+    })
+
+fetch(urlseriestop)
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(data){
+        console.log(data);
+        let contenedor = document.querySelector(".serietop")
+        for (let i=0; i<4; i++){
+            console.log(data.results[i]);
+            let image = data.results[i].poster_path
+            let name = data.results[i].name
+            let id = data.results[i].id
+            contenedor.innerHTML += `<div class = "todo">
+            <a href="./Descripcion-serie.html">
+            <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><h3 class = "titulopeli">${name}</h3>
+            </div>`
+        }
+            section1.innerHTML = movie;
+            return data
+    })
+
+    .catch(function(error){
+        console.log(error)
+    })
+
+fetch(urlseriespop)
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(data){
+        console.log(data);
+        let contenedor = document.querySelector(".seriepop")
+        for (let i=0; i<4; i++){
+            console.log(data.results[i]);
+            let image = data.results[i].poster_path
+            let name = data.results[i].name
+            let id = data.results[i].id
+            contenedor.innerHTML += `<div class = "todo">
+            <a href="./Descripcion-serie.html">
+            <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><h3 class = "titulopeli">${name}</h3>
+            </div>`
+        }
+            section1.innerHTML = movie;
+            return data
+    })
+
+    .catch(function(error){
+        console.log(error)
+    })
