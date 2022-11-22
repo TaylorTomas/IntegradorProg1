@@ -1,13 +1,11 @@
-
-
 let queryString = location.search
 let queryStringObj = new URLSearchParams (queryString)
 let queryStringObjId = queryStringObj.get(`id`)
 console.log(queryStringObjId)
 
-let urldetailpeli = `https://api.themoviedb.org/3/movie/${queryStringObjId}?api_key=b76faeee5fc3002a166c7f5c929c2c33&language=en-US`
+let urldetallepeli = `https://api.themoviedb.org/3/movie/${queryStringObjId}?api_key=b76faeee5fc3002a166c7f5c929c2c33&language=en-US`
 
-fetch(urldetailpeli)
+fetch(urldetallepeli)
     .then(function(res){
         return res.json();
     })
@@ -34,8 +32,7 @@ fetch(urldetailpeli)
         let cantidadgeneros = ''
 
         for (let i=0; i<data.genres.length; i++){
-            cantidadgeneros +=
-            `<li>${data.genres[i].name}</li>`
+            cantidadgeneros += `<li>${data.genres[i].name}</li>`
         }
 
         infotexto.innerHTML += cantidadgeneros

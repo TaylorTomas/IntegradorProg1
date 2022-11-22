@@ -24,7 +24,9 @@ fetch(urlpeliculastop)
             let title = data.results[i].title
             let id = data.results[i].id
             let fecha = data.results[i].release_date
-            contenedor.innerHTML += `<div class = "todo">
+            
+            contenedor.innerHTML += 
+            `<div class = "todo">
             <a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula">
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula"><h3 class = "titulopeli">${title} (${fecha})</h3></a>
             </div>`
@@ -51,7 +53,9 @@ fetch(urlpeliculaspop)
             let title = data.results[i].title
             let id = data.results[i].id
             let fecha = data.results[i].release_date
-            contenedor.innerHTML += `<div class = "todo">
+            
+            contenedor.innerHTML += 
+            `<div class = "todo">
             <a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula">
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula"><h3 class = "titulopeli">${title} (${fecha})</h3></a>
             </div>`
@@ -77,8 +81,10 @@ fetch(urlseriestop)
             let name = data.results[i].name
             let id = data.results[i].id
             let fecha = data.results[i].first_air_date
-            contenedor.innerHTML += `<div class = "todo">
-            <a href="./Descripcion-serie.html">
+            
+            contenedor.innerHTML += 
+            `<div class = "todo">
+            <a href="./Descripcion-serie.html?id=${id}&tipo=serie">
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-serie.html"><h3 class = "titulopeli">${name} (${fecha})</h3></a>
             </div>`
         }
@@ -103,8 +109,10 @@ fetch(urlseriespop)
             let name = data.results[i].name
             let id = data.results[i].id
             let fecha = data.results[i].first_air_date
-            contenedor.innerHTML += `<div class = "todo">
-            <a href="./Descripcion-serie.html">
+            
+            contenedor.innerHTML += 
+            `<div class = "todo">
+            <a href="./Descripcion-serie.html?id=${id}&tipo=serie">
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-serie.html"><h3 class = "titulopeli">${name} (${fecha})</h3></a>
             </div>`
         }
