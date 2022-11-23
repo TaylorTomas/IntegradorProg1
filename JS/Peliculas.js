@@ -17,7 +17,7 @@ fetch(urlpeliculastop)
     })
     .then(function(data){
         console.log(data);
-        let contenedor = document.querySelector(".pelitop")
+        let seccion = document.querySelector(".pelitop")
         for (let i=0; i<4; i++){
             console.log(data.results[i]);
             let image = data.results[i].poster_path
@@ -25,7 +25,7 @@ fetch(urlpeliculastop)
             let id = data.results[i].id
             let fecha = data.results[i].release_date
             
-            contenedor.innerHTML += 
+            seccion.innerHTML += 
             `<div class = "todo">
             <a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula">
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula"><h3 class = "titulopeli">${title} (${fecha})</h3></a>
@@ -46,7 +46,7 @@ fetch(urlpeliculaspop)
     })
     .then(function(data){
         console.log(data);
-        let contenedor = document.querySelector(".pelipop")
+        let seccion = document.querySelector(".pelipop")
         for (let i=0; i<4; i++){
             console.log(data.results[i]);
             let image = data.results[i].poster_path
@@ -54,7 +54,7 @@ fetch(urlpeliculaspop)
             let id = data.results[i].id
             let fecha = data.results[i].release_date
             
-            contenedor.innerHTML += 
+            seccion.innerHTML += 
             `<div class = "todo">
             <a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula">
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula"><h3 class = "titulopeli">${title} (${fecha})</h3></a>
@@ -74,7 +74,7 @@ fetch(urlseriestop)
     })
     .then(function(data){
         console.log(data);
-        let contenedor = document.querySelector(".serietop")
+        let seccion = document.querySelector(".serietop")
         for (let i=0; i<4; i++){
             console.log(data.results[i]);
             let image = data.results[i].poster_path
@@ -82,7 +82,7 @@ fetch(urlseriestop)
             let id = data.results[i].id
             let fecha = data.results[i].first_air_date
             
-            contenedor.innerHTML += 
+            seccion.innerHTML += 
             `<div class = "todo">
             <a href="./Descripcion-serie.html?id=${id}&tipo=serie">
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-serie.html"><h3 class = "titulopeli">${name} (${fecha})</h3></a>
@@ -102,7 +102,7 @@ fetch(urlseriespop)
     })
     .then(function(data){
         console.log(data);
-        let contenedor = document.querySelector(".seriepop")
+        let seccion = document.querySelector(".seriepop")
         for (let i=0; i<4; i++){
             console.log(data.results[i]);
             let image = data.results[i].poster_path
@@ -110,7 +110,7 @@ fetch(urlseriespop)
             let id = data.results[i].id
             let fecha = data.results[i].first_air_date
             
-            contenedor.innerHTML += 
+            seccion.innerHTML += 
             `<div class = "todo">
             <a href="./Descripcion-serie.html?id=${id}&tipo=serie">
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-serie.html"><h3 class = "titulopeli">${name} (${fecha})</h3></a>
