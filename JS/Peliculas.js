@@ -31,8 +31,7 @@ fetch(urlpeliculastop)
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula"><h3 class = "titulopeli">${title} (${fecha})</h3></a>
             </div>`
         }
-            section1.innerHTML = movie;
-            return data
+           
     })
 
     .catch(function(error){
@@ -60,8 +59,7 @@ fetch(urlpeliculaspop)
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-pelicula.html?id=${id}&tipo=pelicula"><h3 class = "titulopeli">${title} (${fecha})</h3></a>
             </div>`
         }
-            section1.innerHTML = movie;
-            return data
+            
     })
 
     .catch(function(error){
@@ -88,8 +86,6 @@ fetch(urlseriestop)
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-serie.html"><h3 class = "titulopeli">${name} (${fecha})</h3></a>
             </div>`
         }
-            section1.innerHTML = movie;
-            return data
     })
 
     .catch(function(error){
@@ -116,8 +112,7 @@ fetch(urlseriespop)
             <img class = "Img" src="https://image.tmdb.org/t/p/w500/${image}"></a><a href="./Descripcion-serie.html"><h3 class = "titulopeli">${name} (${fecha})</h3></a>
             </div>`
         }
-            section1.innerHTML = movie;
-            return data
+
     })
 
     .catch(function(error){

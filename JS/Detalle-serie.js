@@ -19,8 +19,7 @@ fetch(urldetalleserie)
         `<h2 class="Titulo"> ${data.name}</h2>
         <img class="DescripcionFoto" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="">
         <p class="MirarAhora">Mirar Ahora</p>
-        <img class="Playboton" src="./Fotos/estrella.png" alt="">
-        <a href="./Favoritos.html"><p class="MirarAhora">Favoritos</p></a>
+        <button class = "favoritos">Agregar a favoritos</button>
 
         <p class="Texto">Sinopsis: ${data.overview}</p>
         <p class="Texto">Calificacion: ${data.vote_average}</p>
@@ -70,3 +69,42 @@ fetch(urldetalleserie)
         .catch(function(error){
             console.log(error)
     })
+
+    //Favoritos
+
+let favoritos = []
+
+let recuperstorage = localStorage.getitem ('SeriesFavs')
+
+if (recuperstorage !== null){
+    favoritos = JSON.parse(recuperstorage)
+
+}
+
+let boton = document.querySelector(".favoritos");
+
+if (favoritos.includes(queryStringObjId)){
+    boton.innerText = 'quitar de Favoritos'
+
+}
+
+boton.addEventListener('click',function(){
+    
+    if (favoritos.includes(id)){
+        let indicedePelicula = favoritos.indexOf(queryStringObjId)
+        favoritos.splice(indicedePelicula,1)
+        boton.innerText =  'agregar a Favoritos'
+    }
+    else{
+        favoritos.push(queryStringObjId);
+        boton.innerText = 'quitar de Favoritos'
+    }
+    
+    
+
+    let favstostrings = JSON.stringify(favoritos)
+    localStorage.setItem('SeriesFavs',favstostrings)
+
+
+}
+)
